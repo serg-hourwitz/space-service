@@ -1,0 +1,16 @@
+@import './fonts/fonts.scss';
+@import './constants/normalize.scss';
+@import './constants/base.scss';
+@import './libs/swiper.scss';
+@import './components/modal.scss';
+@import './variables/variables.scss';
+
+
+header,
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #CCD1D9;
+  font-size: 30px;
+
+}
