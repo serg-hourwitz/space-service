@@ -1,9 +1,9 @@
 :root {
   /* Fonts */
   --f-reg: "Regular";
-  --f-med: "Medium";
-  --f-semi: "SemiBold";
   --f-bold: "Bold";
+  --f-semi: "SemiBold";
+  --f-extra: "ExtraBold";
   --f-jakarta: "Jakarta";
 
   --fs-14: 14px; 
@@ -27,5 +27,11 @@
   /* blur */
   
   --blur-32: blur(32px);
+
+  /* border radius */
+
+  --br-16: 16px;
+  --br-32: 32px;
+  --br-cycle: 50%;
 }
   

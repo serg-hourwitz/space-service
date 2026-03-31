@@ -1,0 +1,79 @@
+.header {
+  background-image: url('../../images/header-bg/header-bg1.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  border-radius: var(--br-32);
+
+  &__nav-container {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 0 16px;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__nav-link {
+    padding: 12px;
+    font-size: var(--fs-14);
+    color: var(--c-secondary);
+    font-family: var(--f-reg);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--c-red);
+    }
+  }
+
+  &__nav-control {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__nav-select {
+    border-radius: var(--br-32);
+    background-color: #0000004D;
+    backdrop-filter: blur(32px);
+    color: var(--c-secondary);
+    outline: none;
+    border: none;
+    padding: 16px;
+  }
+
+}
+
+.book__btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background-color: var(--c-red);
+  border: none;
+  border-radius: var(--br-32);
+
+  color: var(--c-secondary);
+  font-size: var(--fs-14);
+
+  &-text {
+    padding: 16px 0 16px 16px;
+  }
+
+  &-arrow {
+    width: 32px;
+    height: 32px;
+    background-color: var(--c-secondary);
+    border-radius: var(--br-cycle);
+    margin-right: 8px;
+  }
+}
