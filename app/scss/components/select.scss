@@ -1,0 +1,74 @@
+.header__nav-control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__nav-lang {
+  display: flex;
+  position: relative;
+  width: 120px;
+  height: 47px;
+  font-family: var(--f-reg);
+  border-radius: var(--br-32);
+  background: #78695F;
+}
+
+/* Поточне значення */
+.header__nav-current {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  padding: 8px 12px;
+  background: #78695F;
+  border-radius: 32px;
+  cursor: pointer;
+  color: var(--c-secondary);
+  transition: 0.3s;
+}
+
+.header__nav-current:hover {
+  background: #00000066;
+}
+
+/* Прапор */
+.header__nav-current img,
+.header__nav-option img {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+}
+
+/* Dropdown */
+.header__nav-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  background: #78695F;
+  backdrop-filter: blur(32px);
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+  z-index: 10;
+}
+
+/* Option */
+.header__nav-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 12px;
+  color: var(--c-secondary);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.header__nav-option:hover {
+  background: #00000066;
+}
+
+.header__nav-option:first-child {
+  border-bottom: 1px solid var(--c-secondary);
+}
