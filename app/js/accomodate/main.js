@@ -1,2 +1,2 @@
-//= ../components/modal.js
+//= ../components/select.js
 console.log('Hello');

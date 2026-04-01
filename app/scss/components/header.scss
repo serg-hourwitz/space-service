@@ -38,18 +38,78 @@
 
   &__nav-control {
     display: flex;
+    align-items: center;
     gap: 16px;
   }
 
-  &__nav-select {
+  &__nav-lang {
+    display: flex;
+    position: relative;
+    width: 120px;
+    height: 47px;
+    font-family: var(--f-reg);
     border-radius: var(--br-32);
-    background-color: #0000004D;
-    backdrop-filter: blur(32px);
-    color: var(--c-secondary);
-    outline: none;
-    border: none;
-    padding: 16px;
+    background: #78695F;
   }
+
+  /* Поточне значення */
+  &__nav-current {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    padding: 8px 12px;
+    background: #78695F;
+    border-radius: 32px;
+    cursor: pointer;
+    color: var(--c-secondary);
+    transition: 0.3s;
+  }
+
+  &__nav-current:hover {
+    background: #00000066;
+  }
+
+  /* Прапор */
+  &__nav-current img,
+  &__nav-option img {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+  }
+
+  /* Dropdown */
+  &__nav-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    background: #78695F;
+    backdrop-filter: blur(32px);
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    z-index: 10;
+  }
+
+  /* Option */
+  &__nav-option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: var(--c-secondary);
+    transition: 0.2s;
+  }
+
+  &__nav-option:hover {
+    background: #00000066;
+  }
+
+    &__nav-option:first-child {
+      border-bottom: 1 px solid var(--c-secondary);
+    }
 
 }
 

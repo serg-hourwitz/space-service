@@ -18,11 +18,25 @@
       </ul>
 
       <div class="header__nav-control">
-        <select name="lang" id="lang" class="header__nav-select">
-          <option value="en" class="header__nav-option">EN</option>
-          <option value="ukr" class="header__nav-option">UKR</option>
-        </select>
-        
+        <div class="header__nav-lang">
+          <div class="header__nav-current">
+            <img src="../../images/flags/gb.webp" alt="EN">
+            <span>EN</span>
+              <svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg>
+          </div>
+
+          <div class="header__nav-dropdown">
+            <div class="header__nav-option" data-value="en">
+              <img src="../../images/flags/gb.webp" alt="EN">
+              <span>EN</span>
+            </div>
+            <div class="header__nav-option" data-value="ukr">
+              <img src="../../images/flags/ukr.webp" alt="UKR">
+              <span>UKR</span>
+            </div>
+          </div>
+        </div>
+
         <button type="button" id="book-btn" class="book__btn">
           <div class="book__btn-text">Book an appointment</div>
           <div class="book__btn-arrow"><svg
