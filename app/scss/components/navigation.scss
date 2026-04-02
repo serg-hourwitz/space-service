@@ -1,0 +1,17 @@
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__nav-link {
+  padding: 12px;
+  font-size: var(--fs-14);
+  color: var(--c-secondary);
+  font-family: var(--f-reg);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--c-red);
+  }
+}

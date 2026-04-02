@@ -1,10 +1,31 @@
 .header {
-  background-image: url('../../images/header-bg/header-bg1.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  border-radius: var(--br-32);
+
+  &__header-1,
+  &__header-2,
+  &__header-3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--br-32);
+  }
+
+
+  &__header-1 {
+    background-image: url('../../images/header-bg/header-bg1.webp');
+  }
+  &__header-2 {
+    background-image: url('../../images/header-bg/header-bg2.webp');
+  }
+  &__header-3 {
+    background-image: url('../../images/header-bg/header-bg3.webp');
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px 0 16px;
+    margin-bottom: 170px;
+  }
 
   &__nav-container {
     display: flex;
@@ -12,62 +33,47 @@
     gap: 65px;
   }
 
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 16px 0 16px;
+  &__title-wrapper {
+    max-width: 620px;
+    padding: 0 32px 32px;
   }
 
-  &__nav-list {
-    display: flex;
-    gap: 16px;
+  &__title {
+    font-size: var(--fs-48);
+    color: var(--c-secondary);
+    font-family: var(--f-extra);
+    text-transform: uppercase;
+    line-height: 100%;
+    padding-bottom: 4px;
   }
 
-  &__nav-link {
-    padding: 12px;
-    font-size: var(--fs-14);
+  &__subtitle {
+    font-size: var(--fs-20);
     color: var(--c-secondary);
     font-family: var(--f-reg);
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: var(--c-red);
-    }
+    padding-bottom: 24px;
   }
 
-  
-}
-
-.book__btn {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  background-color: var(--c-red);
-  border: none;
-  border-radius: var(--br-32);
-
-  color: var(--c-secondary);
-  font-size: var(--fs-14);
-  cursor: pointer;
-
-  &-text {
-    padding: 16px 0 16px 16px;
+  &__info {
+    margin-top: 65px;
+    padding: 16px;
+    backdrop-filter: blur(32px);
+    border-radius: var(--br-16);
   }
 
-  &-arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 32px;
-    height: 32px;
-    background-color: var(--c-secondary);
-    border-radius: var(--br-cycle);
-    margin-right: 8px;
+  &__info-title,
+  &__info-text {
+    color: var(--c-secondary);
+  }
 
-    .icon-free-icon-font-angle-small-right {
-      color: var(--c-primary);
-    }
+  &__info-title {
+    font-family: var(semi);
+    font-size: var(--fs-20);
+    padding-bottom: 4px;
+  }
+
+  &__info-text {
+    font-family: var(--f-reg);
+    font-size: var(--fs-14);
   }
 }

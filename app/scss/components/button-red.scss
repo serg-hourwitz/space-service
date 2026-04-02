@@ -1,0 +1,32 @@
+.book__btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background-color: var(--c-red);
+  border: none;
+  border-radius: var(--br-32);
+
+  color: var(--c-secondary);
+  font-size: var(--fs-14);
+  cursor: pointer;
+
+  &-text {
+    padding: 16px 0 16px 16px;
+  }
+
+  &-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--c-secondary);
+    border-radius: var(--br-cycle);
+    margin-right: 8px;
+
+    .icon-free-icon-font-angle-small-right {
+      color: var(--c-primary);
+    }
+  }
+}

@@ -1,24 +1,142 @@
 <header class="header">
-  <nav class="header__nav">
-    <img src="../../images/logos/logo.svg" alt="logo">
 
-    <div class="header__nav-container">
-      <ul class="header__nav-list">
-        <li class="header__nav-item"><a href="#about"
-            class="header__nav-link">About
-            Us</a></li>
-        <li class="header__nav-item"><a href="#gallery"
-            class="header__nav-link">Gallery</a></li>
-        <li class="header__nav-item"><a href="#services"
-            class="header__nav-link">Services</a></li>
-        <li class="header__nav-item"><a href="#reviews"
-            class="header__nav-link">Reviews</a></li>
-        <li class="header__nav-item"><a href="#contacts"
-            class="header__nav-link">Contacts</a></li>
-      </ul>
-      
-      <!--=include header/select.html -->
+  <div id="carouselExampleIndicators" class="carousel slide"
+    data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="header__header-1">
+          <nav class="header__nav">
+            <img src="../../images/logos/logo.svg" alt="logo">
 
-  </nav>
+            <div class="header__nav-container">
+              <!--=include header/navigation.html -->
+              <!--=include header/select.html -->
+              <!--=include header/button-red.html -->
+            </div>
+          </nav>
+
+          <div class="header__title-wrapper">
+            <h1 class="header__title">
+              Trusted car repair in Warsaw
+            </h1>
+            <div class="header__subtitle">
+              Space-level solutions for everyday challenges
+            </div>
+
+            <!--=include header/button-red.html -->
+
+            <div class="header__info">
+              <p class="header__info-title">
+                10+ Years of Experience
+              </p>
+              <p class="header__info-text">
+                Over 10 years of helping drivers in Warsaw keep their cars in
+                perfect
+                condition. Professional diagnostics, quality repairs, and
+                service
+                you
+                can rely on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="header__header-2">
+          <nav class="header__nav">
+            <img src="../../images/logos/logo.svg" alt="logo">
+
+            <div class="header__nav-container">
+              <!--=include header/navigation.html -->
+              <!--=include header/select.html -->
+              <!--=include header/button-red.html -->
+            </div>
+          </nav>
+
+          <div class="header__title-wrapper">
+            <h1 class="header__title">
+              Free full vehicle diagnostics
+            </h1>
+            <div class="header__subtitle">
+              For total bills from <b>800 PLN</b> — diagnostics are <b>FREE </b>!
+            </div>
+
+            <!--=include header/button-red.html -->
+
+            <div class="header__info">
+              <p class="header__info-title">
+                10+ Years of Experience
+              </p>
+              <p class="header__info-text">
+                Over 10 years of helping drivers in Warsaw keep their cars in
+                perfect
+                condition. Professional diagnostics, quality repairs, and
+                service
+                you
+                can rely on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="header__header-3">
+          <nav class="header__nav">
+            <img src="../../images/logos/logo.svg" alt="logo">
+
+            <div class="header__nav-container">
+              <!--=include header/navigation.html -->
+              <!--=include header/select.html -->
+              <!--=include header/button-red.html -->
+            </div>
+          </nav>
+
+          <div class="header__title-wrapper">
+            <h1 class="header__title">
+              Free oil and filter replacement
+            </h1>
+            <div class="header__subtitle">
+              When purchasing oil and filters — labor is <b>FREE</b> !
+            </div>
+
+            <!--=include header/button-red.html -->
+
+            <div class="header__info">
+              <p class="header__info-title">
+                10+ Years of Experience
+              </p>
+              <p class="header__info-text">
+                Over 10 years of helping drivers in Warsaw keep their cars in
+                perfect
+                condition. Professional diagnostics, quality repairs, and
+                service
+                you
+                can rely on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button"
+      data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button"
+      data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
 </header>
