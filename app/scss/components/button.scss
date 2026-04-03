@@ -29,4 +29,18 @@
       color: var(--c-primary);
     }
   }
+
+  /* 🔥 МОДИФІКАТОР */
+  &--secondary {
+    background-color: var(--c-secondary);
+    color: var(--c-primary);
+
+    .book__btn-arrow {
+      background-color: var(--c-red);
+
+      .icon-free-icon-font-angle-small-right {
+        color: var(--c-secondary);
+      }
+    }
+  }
 }
