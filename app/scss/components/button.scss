@@ -4,12 +4,27 @@
   gap: 16px;
 
   background-color: var(--c-red);
+  backdrop-filter: blur(32px);
   border: none;
   border-radius: var(--br-32);
 
   color: var(--c-secondary);
   font-size: var(--fs-14);
   cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(205, 5, 10, .8);
+  }
+
+  &:hover &-arrow {
+    transform: scale(1.2);
+  }
+
+    &:hover &-arrow .icon-free-icon-font-angle-small-right {
+      transform: translateX(3px);
+    }
 
   &-text {
     padding: 16px 0 16px 16px;
@@ -24,9 +39,12 @@
     background-color: var(--c-secondary);
     border-radius: var(--br-cycle);
     margin-right: 8px;
+    transition: transform 0.3s ease;
+
 
     .icon-free-icon-font-angle-small-right {
       color: var(--c-primary);
+      transition: transform 0.3s ease;
     }
   }
 
