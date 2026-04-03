@@ -55,7 +55,9 @@
   }
 
   &__info {
+    max-width: 440px;
     margin-top: 65px;
+    margin-bottom: 32px;
     padding: 16px;
     backdrop-filter: blur(32px);
     border-radius: var(--br-16);

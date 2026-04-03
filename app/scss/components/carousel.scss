@@ -1,0 +1,51 @@
+.carousel {
+  position: relative;
+}
+
+/* 🔥 wrapper */
+.carousel-controls {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 10;
+}
+
+/* прибираємо дефолт bootstrap positioning */
+.carousel-control-prev,
+.carousel-control-next {
+  position: static;
+  width: 40px;
+  height: 40px;
+}
+
+/* індикатори */
+.carousel-indicators {
+  position: static;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+}
+
+/* кнопки-крапки */
+.carousel-indicators button {
+  width: 8px !important;
+  height: 4px;
+  background-color: var(--c-secondary);
+  opacity: 0.5;
+  border: none;
+}
+
+.carousel-indicators .active {
+  width: 26px !important;
+  opacity: 1;
+}
+
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 1rem;
+}
