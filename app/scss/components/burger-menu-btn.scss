@@ -1,4 +1,7 @@
 .burger-menu-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
   width: 40px;
   height: 40px;
   background-color: var(--c-red);
@@ -6,9 +9,6 @@
   border-radius: var(--br-cycle);
   display: none;
   cursor: pointer;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 
   & .icon {
     width: 16px;
@@ -20,8 +20,21 @@
     background-color: var(--c-secondary);
     border: 2px solid var(--c-red);
     transition: background-color 0.3s ease, border 0.3s ease;
+
     & .icon {
       color: var(--c-red);
     }
+  }
+}
+
+@media (max-width: 1280px) {
+  .burger-menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__nav img, .header__nav-container {
+    display: none;
   }
 }

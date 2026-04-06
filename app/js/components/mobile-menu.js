@@ -1,0 +1,24 @@
+const mobileMenu = document.querySelector('.mobile-menu');
+const menuBtn = document.querySelector('.burger-menu-btn');
+const closeBtn = document.querySelector('.mobile-menu__close-btn');
+
+// open mobile menu
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.add('mobile-menu--active');
+});
+
+// close mobile menu
+closeBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('mobile-menu--active');
+});
+
+
+
+// show full number on click
+const showFullNum = document.querySelector('.mobile-menu__contact-sublink');
+const fullNum = document.querySelector('.mobile-menu__contact-link--active');
+
+showFullNum.addEventListener('click', () => {
+  showFullNum.style.display = 'none';
+  fullNum.style.display = 'inline';
+});
