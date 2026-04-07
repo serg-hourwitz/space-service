@@ -3,6 +3,11 @@
   align-items: center;
   gap: 16px;
 
+  @include mobile {
+    justify-content: space-between;
+    gap: 0;
+  }
+
   background-color: var(--c-red);
   backdrop-filter: blur(32px);
   border: none;

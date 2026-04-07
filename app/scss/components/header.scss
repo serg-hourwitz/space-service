@@ -12,6 +12,10 @@
 
   &__header-1 {
     background-image: url('../../images/header-bg/header-bg1.webp');
+  
+    @include mobile {
+      background-image: url('../../images/header-bg/header-bg-mob-1.webp');
+    }
   }
 
   &__header-2 {
@@ -27,6 +31,10 @@
     justify-content: space-between;
     padding: 16px 16px 0 16px;
     margin-bottom: 170px;
+
+    @include mobile {
+      margin-bottom: 390px;
+    }
   }
 
   &__nav-container {
@@ -35,9 +43,22 @@
     gap: 65px;
   }
 
+  @include wide {
+    &__nav-container {
+      display: none;
+    }
+  }
+
   &__title-wrapper {
     max-width: 620px;
     padding: 0 32px 32px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 16px 16px;
+    }
   }
 
   &__title {
@@ -47,6 +68,11 @@
     text-transform: uppercase;
     line-height: 100%;
     padding-bottom: 4px;
+
+    @include mobile {
+      text-align: center;
+      font-size: var(--fs-28);
+    }
   }
 
   &__subtitle {
@@ -54,6 +80,11 @@
     color: var(--c-secondary);
     font-family: var(--f-reg);
     padding-bottom: 24px;
+
+    @include mobile {
+      text-align: center;
+      font-size: var(--fs-14);
+    }
   }
 
   &__info {
@@ -63,6 +94,10 @@
     padding: 16px;
     backdrop-filter: blur(32px);
     border-radius: var(--br-16);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__info-title,

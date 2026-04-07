@@ -28,14 +28,10 @@
   }
 }
 
-@media (max-width: 1280px) {
+@include wide {
   .burger-menu-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .header__nav img, .header__nav-container {
-    display: none;
   }
 }

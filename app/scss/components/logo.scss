@@ -1,0 +1,11 @@
+.logo {
+
+  width: 196px;
+
+  @include mobile {
+    & img {
+      width: 147px;
+      padding-top: 8px;
+    }
+  }
+}
