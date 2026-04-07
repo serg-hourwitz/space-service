@@ -1,4 +1,5 @@
 .header {
+  position: relative;
 
   &__header-1,
   &__header-2,
@@ -12,9 +13,11 @@
   &__header-1 {
     background-image: url('../../images/header-bg/header-bg1.webp');
   }
+
   &__header-2 {
     background-image: url('../../images/header-bg/header-bg2.webp');
   }
+
   &__header-3 {
     background-image: url('../../images/header-bg/header-bg3.webp');
   }

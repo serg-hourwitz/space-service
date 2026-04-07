@@ -1,0 +1,78 @@
+.mobile-lang-select {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: var(--f-reg);
+    border: 1px solid var(--c-select-border);
+    border-radius: var(--br-32);
+
+    /* Поточне значення */
+    &-current {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      /*Прапор */
+
+      & img {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+      }
+    }
+
+  }
+
+  /* Dropdown */
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    background-color: var(--c-secondary);
+    border: 1px solid var(--c-select-border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    z-index: 10;
+  }
+
+  /* Option */
+  &__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    color: var(--c-primary);
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:first-child {
+      border-bottom: 1px solid var(--c-select-border);
+    }
+
+    /* Прапор */
+
+    & img {
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+    }
+  }
+}
+
+.icon-angle-down {
+  transition: transform 0.3s ease;
+}
+
+.icon-angle-down.is-open {
+  transform: rotate(180deg);
+}
