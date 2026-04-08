@@ -8,6 +8,7 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: var(--br-32);
+    height: 670px;
   }
 
   &__header-1 {
@@ -69,9 +70,13 @@
     line-height: 100%;
     padding-bottom: 4px;
 
+    @include small {
+      font-size: var(--fs-28);
+    }
+
     @include mobile {
       text-align: center;
-      font-size: var(--fs-28);
+      font-size: var(--fs-24);
     }
   }
 
@@ -95,7 +100,11 @@
     backdrop-filter: blur(32px);
     border-radius: var(--br-16);
 
-    @include mobile {
+    @include medium {
+      margin-top: 32px;
+    }
+
+    @include small {
       display: none;
     }
   }
