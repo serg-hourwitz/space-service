@@ -1,0 +1,48 @@
+<div class="request-form-modal">
+
+  <div class="request-form-modal__wrapper">
+    <div class="request-form-modal__close-btn">
+      <svg class="icon icon-free-icon-font-cross-small-3917123"><use
+          xlink:href="#icon-free-icon-font-cross-small-3917123"></use></svg>
+    </div>
+
+    <h2 class="request-form-modal__title">Send a Request</h2>
+
+    <p class="request-form-modal__text">
+      Leave a request and our specialist will contact you shortly to clarify
+      details, answer your questions, and offer the best solution for your
+      vehicle.
+    </p>
+
+    <form action="#" class="request-form-modal__form">
+      <div class="request-form-modal__input-group">
+        <label for="name" class="request-form-modal__label">Name</label>
+        <input type="text" id="name" name="name"
+          class="request-form-modal__input"
+          placeholder="Your name">
+      </div>
+
+      <div class="request-form-modal__input-group">
+        <label for="email" class="request-form-modal__label">E-mail</label>
+        <input type="email" id="email" name="email"
+          class="request-form-modal__input"
+          placeholder="E-Mail">
+      </div>
+
+      <div class="request-form-modal__input-group">
+        <label for="phone" class="request-form-modal__label">Phone Number</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          class="request-form-modal__input"
+          placeholder="tel">
+      </div>
+
+      <!--=include buttons/button-primary.html-->
+
+    </form>
+  </div>
+
+  <div class="request-form-modal__image">
+    <div class="gradient"></div>
+    <img src="../../images/request-form-bg.webp" alt="bg">
+  </div>
+</div>
