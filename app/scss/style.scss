@@ -6,14 +6,15 @@
 @import './variables/variables.scss';
 @import './components/header.scss';
 @import './components/logo.scss';
-@import './components/select.scss';
-@import './components/mobile-lang-select.scss';
+@import './components/selects/select.scss';
+@import './components/selects/mobile-lang-select.scss';
 @import './components/button.scss';
 @import './components/navigation.scss';
 @import './components/carousel.scss';
 @import './components/burger-menu-btn.scss';
 @import './components/mobile-menu.scss';
 @import './components/request-form-modal.scss';
+@import './components/selects/form-phone-select.scss';
 
 
 
