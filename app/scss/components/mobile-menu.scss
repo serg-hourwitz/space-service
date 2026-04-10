@@ -6,16 +6,23 @@
   width: calc(100% - 63px);
   max-width: 1440px;
   background-color: var(--c-secondary);
-  z-index: 9999;
-  display: none;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
   border-radius: var(--br-32);
   padding: 32px;
   font-size: var(--fs-16);
 
   &--active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
     top: 16px;
-    width: calc(100% - 32px);
+    width: calc(100% - 64px);
+
+    @include medium {
+      width: calc(100% - 32px);
+    }
   }
 
   &__close-btn {
