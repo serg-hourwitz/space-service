@@ -1,0 +1,58 @@
+.request-success-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  max-width: 400px;
+  width: 100%;
+  background-color: var(--c-red);
+  color: var(--c-secondary);
+  border-radius: var(--br-32);
+  padding: 32px;
+  text-align: center;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__close-btn {
+    position: absolute;
+    z-index: 1001;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    color: var(--c-secondary);
+    transition: color .3s ease;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-family: var(--f-extra);
+    font-size: var(--fs-24);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: var(--fs-14);
+    margin-bottom: 16px;
+  }
+
+  &__success-btn {
+    width: 206px;
+    padding: 16px;
+    background-color: var(--c-secondary);
+    color: var(--c-primary);
+    font-size: var(--fs-14);
+    font-family: var(--f-reg);
+    border: none;
+    border-radius: var(--br-32);
+  }
+}

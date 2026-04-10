@@ -4,4 +4,5 @@
 //= ../components/form-phone-select.js
 //= ../components/form-validation.js
 //= ../components/request-form-modal.js
+//= ../components/request-success-modal.js
 console.log('Hello');

@@ -1,8 +1,9 @@
 const form = document.querySelector('.request-form-modal__form');
-
+const modal = document.querySelector('.request-form-modal');
 const nameInput = form.querySelector('#name');
 const emailInput = form.querySelector('#email');
 const phoneInput = form.querySelector('#phone');
+const successModal = document.querySelector('.request-success-modal');
 
 // 🔥 регулярки
 const patterns = {
@@ -78,7 +79,11 @@ form.addEventListener('submit', (e) => {
 
   // ✅ якщо все ок
   if (isValid) {
+    modal.classList.remove('active');
     console.log('Form submitted 🚀');
+    successModal.classList.add('active');
+    overlay.classList.add('active');
+    document.body.classList.add('no-scroll');
 
     // тут можеш робити fetch / ajax
     form.reset();

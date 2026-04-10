@@ -26,6 +26,8 @@ overlay.addEventListener('click', () => {
 mobileLinks.forEach((link) => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('mobile-menu--active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('no-scroll');
   });
 
   // show full number on click
