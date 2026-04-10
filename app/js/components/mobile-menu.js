@@ -18,6 +18,11 @@ closeBtn.addEventListener('click', () => {
   document.body.classList.remove('no-scroll');
 });
 
+// клік по overlay
+overlay.addEventListener('click', () => {
+  mobileMenu.classList.remove('mobile-menu--active');
+});
+
 mobileLinks.forEach((link) => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('mobile-menu--active');
