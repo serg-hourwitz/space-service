@@ -31,7 +31,6 @@
     right: 16px;
     width: 24px;
     height: 24px;
-    padding: 4px;
     cursor: pointer;
 
     .icon {
@@ -48,9 +47,13 @@
 
   &__content {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 32px;
+
+    @include norm {
+      flex-direction: column;
+      gap: 16px;
+    }
   }
 
   &__title,
@@ -75,6 +78,11 @@
     &:hover {
       transform: translateX(4px);
     }
+  }
+
+  &__nav, &__contacts, &__socials {
+    flex: 1;
+    text-align: center;
   }
 
   &__nav-link {
@@ -126,6 +134,7 @@
 
   &__socials-list {
     display: flex;
+    justify-content: center;
     gap: 8px;
   }
 

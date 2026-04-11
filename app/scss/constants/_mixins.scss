@@ -10,6 +10,12 @@
   }
 }
 
+@mixin norm {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
 @mixin small {
   @media (max-width: 680px) {
     @content;
