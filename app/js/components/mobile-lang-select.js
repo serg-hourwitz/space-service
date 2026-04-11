@@ -15,16 +15,16 @@ mobileSelects.forEach(select => {
 
     // закриваємо інші селекти
     document.querySelectorAll('.mobile-lang-select__dropdown').forEach(d => {
-      if (d !== dropdown) d.style.display = 'none';
+      if (d !== dropdown) d.classList.remove('is-open');
     });
 
     document.querySelectorAll('.icon-angle-down').forEach(icon => {
       if (icon !== arrow) icon.classList.remove('is-open');
     });
 
-    const isOpen = dropdown.style.display === 'block';
-    dropdown.style.display = isOpen ? 'none' : 'block';
+    const isOpen = dropdown.classList.contains('is-open');
 
+    dropdown.classList.toggle('is-open', !isOpen);
     arrow.classList.toggle('is-open', !isOpen);
   });
 
@@ -38,7 +38,7 @@ mobileSelects.forEach(select => {
       currentImg.alt = text;
       currentText.textContent = text;
 
-      dropdown.style.display = 'none';
+      dropdown.classList.remove('is-open');
       arrow.classList.remove('is-open');
     });
   });
@@ -47,7 +47,7 @@ mobileSelects.forEach(select => {
 // ❌ клік поза — закрити
 document.addEventListener('click', () => {
   document.querySelectorAll('.mobile-lang-select__dropdown').forEach(d => {
-    d.style.display = 'none';
+    d.classList.remove('is-open');
   });
 
   document.querySelectorAll('.icon-angle-down').forEach(icon => {

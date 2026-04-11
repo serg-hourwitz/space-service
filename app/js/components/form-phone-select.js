@@ -20,7 +20,7 @@ phoneSelects.forEach((select) => {
     e.stopPropagation();
 
     document.querySelectorAll('.form-phone-select__dropdown').forEach((d) => {
-      if (d !== dropdown) d.style.display = 'none';
+      if (d !== dropdown) d.classList.remove('is-open');
     });
 
     document
@@ -29,9 +29,9 @@ phoneSelects.forEach((select) => {
         if (icon !== arrow) icon.classList.remove('is-open');
       });
 
-    const isOpen = dropdown.style.display === 'block';
-    dropdown.style.display = isOpen ? 'none' : 'block';
+    const isOpen = dropdown.classList.contains('is-open');
 
+    dropdown.classList.toggle('is-open', !isOpen);
     arrow.classList.toggle('is-open', !isOpen);
   });
 
@@ -57,7 +57,7 @@ phoneSelects.forEach((select) => {
         phoneInput.placeholder = '000-000-000';
       }
 
-      dropdown.style.display = 'none';
+      dropdown.classList.remove('is-open');
       arrow.classList.remove('is-open');
     });
   });
@@ -66,7 +66,7 @@ phoneSelects.forEach((select) => {
 // ❌ клік поза
 document.addEventListener('click', () => {
   document.querySelectorAll('.form-phone-select__dropdown').forEach((d) => {
-    d.style.display = 'none';
+    d.classList.remove('is-open');
   });
 
   document

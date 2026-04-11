@@ -7,13 +7,14 @@ function updateAllSelects(imgSrc, text) {
     const currentImg = current.querySelector('img');
     const currentText = current.querySelector('span');
     const arrow = current.querySelector('.icon-angle-down');
+    const dropdown = select.querySelector('.header__nav-dropdown');
 
     currentImg.src = imgSrc;
     currentImg.alt = text;
     currentText.textContent = text;
 
     // закриваємо dropdown
-    select.querySelector('.header__nav-dropdown').style.display = 'none';
+    dropdown.classList.remove('is-open');
     arrow.classList.remove('is-open');
   });
 }
@@ -29,16 +30,18 @@ langSelects.forEach((langSelect) => {
 
     // закриваємо всі інші
     document.querySelectorAll('.header__nav-dropdown').forEach((d) => {
-      if (d !== dropdown) d.style.display = 'none';
+      if (d !== dropdown) d.classList.remove('is-open');
     });
 
-    document.querySelectorAll('.icon-angle-down').forEach((icon) => {
-      if (icon !== arrow) icon.classList.remove('is-open');
-    });
+    document
+      .querySelectorAll('.header__nav-lang .icon-angle-down')
+      .forEach((icon) => {
+        if (icon !== arrow) icon.classList.remove('is-open');
+      });
 
-    const isOpen = dropdown.style.display === 'block';
-    dropdown.style.display = isOpen ? 'none' : 'block';
+    const isOpen = dropdown.classList.contains('is-open');
 
+    dropdown.classList.toggle('is-open', !isOpen);
     arrow.classList.toggle('is-open', !isOpen);
   });
 
@@ -47,19 +50,21 @@ langSelects.forEach((langSelect) => {
       const img = option.querySelector('img').src;
       const text = option.querySelector('span').textContent;
 
-      // 🔥 головна магія
+      // 🔥 синхронізація
       updateAllSelects(img, text);
     });
   });
 });
 
-// глобальний клік
+// ❌ клік поза
 document.addEventListener('click', () => {
   document.querySelectorAll('.header__nav-dropdown').forEach((d) => {
-    d.style.display = 'none';
+    d.classList.remove('is-open');
   });
 
-  document.querySelectorAll('.icon-angle-down').forEach((icon) => {
-    icon.classList.remove('is-open');
-  });
+  document
+    .querySelectorAll('.header__nav-lang .icon-angle-down')
+    .forEach((icon) => {
+      icon.classList.remove('is-open');
+    });
 });

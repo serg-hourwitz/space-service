@@ -49,8 +49,15 @@
   backdrop-filter: blur(32px);
   border-radius: 8px;
   overflow: hidden;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 10;
+}
+
+.header__nav-dropdown.is-open {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Option */
