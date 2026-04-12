@@ -33,11 +33,32 @@
     &:hover {
       color: var(--c-red);
     }
+
+    @include small {
+      top: 16px;
+      right: 16px;
+      color: inherit;
+    }
   }
 
   &__wrapper {
     flex: 1;
     padding: 16px;
+
+    @include small {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    display: none;
+    margin-bottom: 16px;
+
+    @include small {
+      display: block;
+    }
   }
 
   &__title {
@@ -50,12 +71,17 @@
   &__text {
     font-size: var(--fs-12);
     margin-bottom: 16px;
+
+    @include small {
+      text-align: center;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
 
     & input[type=submit] {
       border: none;
@@ -131,6 +157,10 @@
     border-radius: var(--br-16);
     overflow: hidden;
     /* 🔥 ключове */
+
+    @include small {
+      display: none;
+    }
 
     & img {
       width: 100%;
