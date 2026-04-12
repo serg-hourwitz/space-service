@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  margin-bottom: 50px;
 
   &__header-1,
   &__header-2,
@@ -13,7 +14,7 @@
 
   &__header-1 {
     background-image: url('../../images/header-bg/header-bg1.webp');
-  
+
     @include mobile {
       background-image: url('../../images/header-bg/header-bg-mob-1.webp');
     }
@@ -115,7 +116,7 @@
   }
 
   &__info-title {
-    font-family: var(semi);
+    font-family: var(--f-semi);
     font-size: var(--fs-20);
     padding-bottom: 4px;
   }
@@ -123,5 +124,23 @@
   &__info-text {
     font-family: var(--f-reg);
     font-size: var(--fs-14);
+  }
+
+  &__bottom-text {
+    font-family: var(--f-extra);
+    font-size: var(--fs-31);
+    text-transform: uppercase;
+
+    & span {
+      color: var(--c-gray-text);
+    }
+
+    @include norm {
+      font-size: var(--fs-26);
+    }
+
+    @include mobile {
+      font-size: var(--fs-21);
+    }
   }
 }
