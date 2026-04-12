@@ -28,9 +28,9 @@
     transform: scale(1.2);
   }
 
-    &:hover &-arrow .icon-free-icon-font-angle-small-right {
-      transform: translateX(3px);
-    }
+  &:hover &-arrow .icon-free-icon-font-angle-small-right {
+    transform: translateX(3px);
+  }
 
   &-text {
     padding: 16px 0 16px 16px;
@@ -58,6 +58,7 @@
   &--secondary {
     background-color: var(--c-secondary);
     color: var(--c-primary);
+    width: 100%;
 
     .book__btn-arrow {
       background-color: var(--c-red);
@@ -65,6 +66,14 @@
       .icon-free-icon-font-angle-small-right {
         color: var(--c-secondary);
       }
+    }
+
+    &:hover {
+      background-color: var(--c-red);
+    }
+
+    &:hover .book__btn-arrow {
+      border: 1px solid var(--c-secondary);
     }
   }
 }

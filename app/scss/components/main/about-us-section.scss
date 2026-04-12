@@ -1,0 +1,65 @@
+.about-us {
+  display: flex;
+  gap: 16px;
+
+
+  &__container-item {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__choose-item,
+  &__advantage-item {
+    padding: 32px;
+    color: var(--c-secondary);
+    border: none;
+    border-radius: var(--br-32);
+  }
+
+  &__choose-item {
+    position: relative;
+    overflow: hidden;
+    background-image: url(../../../images/main-choose-bg.webp);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__choose-content {
+    position: relative;
+    inset: 0;
+    z-index: 20;
+    margin-bottom: 241px;
+  }
+
+  &__choose-title {
+    font-family: var(--f-bold);
+    font-size: var(--fs-20);
+    padding-bottom: 8px;
+  }
+
+  &__button {
+    position: relative;
+    z-index: 20;
+  }
+}
+
+.progressive-blur {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+
+  backdrop-filter: blur(20px);
+
+  /* 🔥 градієнтна маска */
+  mask-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 30%,
+      rgba(0, 0, 0, 0.4) 45%,
+      rgba(0, 0, 0, 0) 60%);
+}
