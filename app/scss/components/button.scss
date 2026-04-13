@@ -9,6 +9,10 @@
     gap: 0;
   }
 
+  @include small {
+    width: 100%;
+  }
+
   background-color: var(--c-red);
   backdrop-filter: blur(32px);
   border: none;
