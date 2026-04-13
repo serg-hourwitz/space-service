@@ -9,7 +9,7 @@
   visibility: hidden;
   transition: all 0.3s ease;
   max-width: 400px;
-  width: 100%;
+  width: calc(100% - 32px);
   background-color: var(--c-red);
   color: var(--c-secondary);
   border-radius: var(--br-32);
