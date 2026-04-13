@@ -1,11 +1,22 @@
 .about-us {
-  display: flex;
+  display: grid;
+  grid-template-columns: (1fr 1fr 2fr);
   gap: 16px;
+  margin-bottom: 50px;
+
+  @include medium {
+    grid-template-columns: (1fr 1fr);
+  }
 
 
   &__container-item {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
+
+    @include medium {
+      grid-column: 1 / 3;
+    }
   }
 
   &__column {
@@ -18,7 +29,6 @@
   &__advantage-item {
     padding: 32px;
     color: var(--c-secondary);
-    border: none;
     border-radius: var(--br-32);
   }
 
@@ -28,13 +38,29 @@
     background-image: url(../../../images/main-choose-bg.webp);
     background-position: center;
     background-size: cover;
+
+    @include small {
+      grid-column: 1 / 3;
+    }
+
+    @include mobile {
+      height: 370px;
+    }
   }
 
   &__choose-content {
     position: relative;
     inset: 0;
     z-index: 20;
-    margin-bottom: 241px;
+    margin-bottom: 228px;
+
+    @include small {
+      margin-bottom: 10px;
+    }
+
+    @include mobile {
+      margin-bottom: 150px;
+    }
   }
 
   &__choose-title {
@@ -46,6 +72,70 @@
   &__button {
     position: relative;
     z-index: 20;
+  }
+
+  &__advantage-item {
+    display: flex;
+    background-color: var(--c-red);
+
+    @include small {
+      grid-column: 1 / 3;
+    }
+
+    @include mobile {
+      height: 370px;
+    }
+  }
+
+  &__advantage-text {
+    align-content: end;
+    font-family: var(--f-extra);
+    font-size: var(--fs-26);
+    text-transform: uppercase;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 16px;
+  }
+
+  &__article {
+    border-radius: var(--br-32);
+    background-color: var(--c-gray-bg);
+    padding: 24px;
+
+    &--max-height {
+      height: 100%;
+    }
+
+    @include medium {
+      height: 100%;
+    }
+  }
+
+  &__article-header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__article-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-20);
+    width: 38px;
+    height: 38px;
+    background-color: var(--c-secondary);
+    border-radius: var(--br-cycle);
+  }
+
+  &__article-title {
+    font-family: var(--f-bold);
+    font-size: var(--fs-16);
+    line-height: 120%;
   }
 }
 
