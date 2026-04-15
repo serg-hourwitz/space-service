@@ -1,0 +1,74 @@
+.service-banner {
+  position: relative;
+  border-radius: var(--br-32);
+  background-color: var(--c-red);
+  margin-bottom: 50px;
+
+  @include norm {
+    height: 405px;
+  }
+
+  @include small {
+    height: 455px;
+    overflow: hidden;
+  }
+
+  @include mobile {
+    height: 485px;
+  }
+
+  &__bgd {
+    position: absolute;
+    left: 68px;
+    bottom: 0;
+    width: 483px;
+    height: 214px;
+    background-image: url('../../../images/banner-bgd.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include norm {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: 87px;
+    padding: 32px 0 32px 0;
+
+    @include norm {
+      position: static;
+      margin: 0 auto;
+      text-align: center;
+      padding: 32px 32px 0 32px;
+    }
+  }
+
+  &__slogan {
+    color: var(--c-secondary);
+    font-family: var(--f-extra);
+    font-size: var(--fs-24);
+    line-height: 100%;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+  }
+
+  &__text {
+    color: var(--c-secondary);
+    padding-bottom: 8px;
+  }
+
+  &__book-btn {
+    width: 230px;
+
+    @include norm {
+      width: inherit;
+    }
+  }
+
+}
