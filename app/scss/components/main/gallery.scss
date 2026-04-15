@@ -1,0 +1,32 @@
+.gallery {
+  margin-bottom: 50px;
+
+  &__slide {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+
+    &-column {
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+
+      @include norm {
+        &:nth-of-type(odd)>div:first-of-type,
+        &:nth-of-type(even)>div:last-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__item {
+    border-radius: var(--br-32);
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
