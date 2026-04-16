@@ -7,12 +7,15 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
 
+    min-height: 100px; // important!
+
     &-column {
       display: flex;
       gap: 16px;
       flex-direction: column;
 
       @include norm {
+
         &:nth-of-type(odd)>div:first-of-type,
         &:nth-of-type(even)>div:last-of-type {
           display: none;
@@ -27,6 +30,52 @@
 
     & img {
       width: 100%;
+    }
+  }
+
+  @include small {
+    // or mobile
+
+    /* ховаємо ВСЕ */
+    &__item {
+      display: none;
+      width: 100%;
+      // max-width: 350px;
+    }
+
+    &__slide {
+      display: block;
+
+      &-column {
+        width: 100%;
+        align-items: center;
+      }
+    }
+
+    /* показуємо потрібні по слайдах */
+
+    .slide-1 {
+      .cards {
+        display: block;
+      }
+    }
+
+    .slide-2 {
+      .snack {
+        display: block;
+      }
+    }
+
+    .slide-3 {
+      .sofa {
+        display: block;
+      }
+    }
+
+    .slide-4 {
+      .engine {
+        display: block;
+      }
     }
   }
 }
