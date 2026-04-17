@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: (1fr 1fr 2fr);
   gap: 16px;
-  margin-bottom: 50px;
 
   @include medium {
     grid-template-columns: (1fr 1fr);
