@@ -2,16 +2,15 @@
 
   &__slide {
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 16px;
-
+    display: flex;
+    gap: 16px;
     min-height: 100px; // important!
 
     &-column {
       display: flex;
       gap: 16px;
       flex-direction: column;
+      flex-shrink: 0;
 
       @include norm {
 
@@ -39,7 +38,6 @@
     &__item {
       display: none;
       width: 100%;
-      // max-width: 350px;
     }
 
     &__slide {

@@ -6,16 +6,17 @@
   --f-extra: "ExtraBold";
   --f-jakarta: "Jakarta";
 
-  --fs-14: 14px; 
+  --fs-14: 14px;
   --fs-48: 48px;
   --fs-31: 31px;
   --fs-28: 28px;
-  --fs-26: 26px; 
+  --fs-26: 26px;
   --fs-24: 24px;
-  --fs-21: 21px; 
+  --fs-21: 21px;
   --fs-20: 20px;
   --fs-16: 16px;
-  --fs-12: 12px; 
+  --fs-12: 12px;
+  --fs-10: 10px;
 
   /* colors */
 
@@ -27,16 +28,18 @@
   --c-select-border: #00000033;
   --c-red: #CD050A;
   --c-blue: #0059FF;
+  --c-star-gray: #6A6A6A;
+  --c-star-gold: #FEA500;
+
 
   /* blur */
-  
+
   --blur-32: blur(32px);
 
   /* border radius */
 
   --br-16: 16px;
-  --br-24: 24px;                  
+  --br-24: 24px;
   --br-32: 32px;
   --br-cycle: 50%;
 }
-  
