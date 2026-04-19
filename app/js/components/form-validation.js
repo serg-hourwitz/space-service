@@ -1,8 +1,5 @@
-const form = document.querySelector('.request-form-modal__form');
+const forms = document.querySelectorAll('.request-form-modal__form');
 const modal = document.querySelector('.request-form-modal');
-const nameInput = form.querySelector('#name');
-const emailInput = form.querySelector('#email');
-const phoneInput = form.querySelector('#phone');
 const successModal = document.querySelector('.request-success-modal');
 
 // 🔥 регулярки
@@ -45,47 +42,58 @@ function getPhonePattern() {
   return patterns.phoneUA;
 }
 
-// 🔥 сабміт
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+// 🔥 обробка кожної форми
+forms.forEach((form) => {
+  const nameInput = form.querySelector('[name="name"]');
+  const emailInput = form.querySelector('[name="email"]');
+  const phoneInput = form.querySelector('[name="phone"]');
 
-  let isValid = true;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  // NAME
-  if (!patterns.name.test(nameInput.value.trim())) {
-    showError(nameInput, 'Enter valid name (min 2 letters)');
-    isValid = false;
-  } else {
-    removeError(nameInput);
-  }
+    let isValid = true;
 
-  // EMAIL
-  if (!patterns.email.test(emailInput.value.trim())) {
-    showError(emailInput, 'Enter valid email');
-    isValid = false;
-  } else {
-    removeError(emailInput);
-  }
+    // NAME
+    if (!patterns.name.test(nameInput.value.trim())) {
+      showError(nameInput, 'Enter valid name (min 2 letters)');
+      isValid = false;
+    } else {
+      removeError(nameInput);
+    }
 
-  // PHONE
-  const phonePattern = getPhonePattern();
+    // EMAIL
+    if (!patterns.email.test(emailInput.value.trim())) {
+      showError(emailInput, 'Enter valid email');
+      isValid = false;
+    } else {
+      removeError(emailInput);
+    }
 
-  if (!phonePattern.test(phoneInput.value.trim())) {
-    showError(phoneInput, 'Enter valid phone format');
-    isValid = false;
-  } else {
-    removeError(phoneInput);
-  }
+    // PHONE
+    const phonePattern = getPhonePattern(form);
 
-  // ✅ якщо все ок
-  if (isValid) {
-    modal.classList.remove('active');
-    console.log('Form submitted 🚀');
-    successModal.classList.add('active');
-    overlay.classList.add('active');
-    document.body.classList.add('no-scroll');
+    if (!phonePattern.test(phoneInput.value.trim())) {
+      showError(phoneInput, 'Enter valid phone format');
+      isValid = false;
+    } else {
+      removeError(phoneInput);
+    }
 
-    // тут можеш робити fetch / ajax
-    form.reset();
-  }
+    // ✅ якщо все ок
+    if (isValid) {
+      console.log('Form submitted 🚀');
+
+      // закриваємо модалку (якщо це вона)
+      if (modal.classList.contains('active')) {
+        modal.classList.remove('active');
+      }
+
+      // відкриваємо success modal
+      successModal.classList.add('active');
+      overlay.classList.add('active');
+      document.body.classList.add('no-scroll');
+
+      form.reset();
+    }
+  });
 });
