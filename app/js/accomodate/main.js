@@ -5,4 +5,5 @@
 //= ../components/form-validation.js
 //= ../components/request-form-modal.js
 //= ../components/request-success-modal.js
+//= ../components/text-hide.js
 console.log('Hello');
