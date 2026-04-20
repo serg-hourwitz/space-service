@@ -28,8 +28,13 @@
       height: 375px;
       width: 482px;
 
+      & iframe {
+        width: 100%;
+      }
+
       @include medium {
         margin: 0 auto;
+        width: 100%;
       }
       
       @include small {
