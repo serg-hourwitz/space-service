@@ -13,19 +13,19 @@
   }
 
   &__header-1 {
-    background-image: url('../../images/header-bg/header-bg1.webp');
+    background-image: url('../images/header-bg/header-bg1.webp');
 
     @include mobile {
-      background-image: url('../../images/header-bg/header-bg-mob-1.webp');
+      background-image: url('../images/header-bg/header-bg-mob-1.webp');
     }
   }
 
   &__header-2 {
-    background-image: url('../../images/header-bg/header-bg2.webp');
+    background-image: url('../images/header-bg/header-bg2.webp');
   }
 
   &__header-3 {
-    background-image: url('../../images/header-bg/header-bg3.webp');
+    background-image: url('/../images/header-bg/header-bg3.webp');
   }
 
   &__nav {
