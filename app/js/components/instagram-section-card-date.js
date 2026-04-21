@@ -1,5 +1,4 @@
 const currentDate = document.querySelectorAll('.instagram-section-card__date');
-console.log(currentDate);
 
 if (currentDate) {
   const now = new Date();

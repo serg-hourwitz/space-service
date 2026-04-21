@@ -7,4 +7,3 @@
 //= ../components/request-success-modal.js
 //= ../components/text-hide.js
 //= ../components/instagram-section-card-date
-console.log('Hello');
