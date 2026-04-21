@@ -12,10 +12,15 @@
   &__appeal {
     font-family: var(--f-extra);
     font-size: var(--fs-31);
+    text-transform: uppercase;
     padding-bottom: 8px;
   }
 
   &__carousel {
     margin-bottom: 32px;
+  }
+
+  & .slide {
+    margin-bottom: 0;
   }
 }
