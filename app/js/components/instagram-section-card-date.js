@@ -1,4 +1,5 @@
-const currentDate = document.querySelector('.instagram-section-card__date');
+const currentDate = document.querySelectorAll('.instagram-section-card__date');
+console.log(currentDate);
 
 if (currentDate) {
   const now = new Date();
@@ -22,5 +23,7 @@ if (currentDate) {
   const month = months[now.getMonth()];
   const year = now.getFullYear();
 
-  currentDate.textContent = `${day} ${month} ${year}`;
+  currentDate.forEach((date) => {
+    date.textContent = `${day} ${month} ${year}`;
+  })
 }

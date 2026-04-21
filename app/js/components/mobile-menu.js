@@ -39,3 +39,14 @@ mobileLinks.forEach((link) => {
     fullNum.style.display = 'inline';
   });
 });
+
+// show full number on click in footer
+  const showFullNumFooter = document.querySelector('.footer__header-menu-contacts-sublink');
+  const fullNumFooter = document.querySelector(
+    '.footer__header-menu-contacts-link--active',
+  );
+
+  showFullNumFooter.addEventListener('click', () => {
+    showFullNumFooter.style.display = 'none';
+    fullNumFooter.style.display = 'inline';
+  });
