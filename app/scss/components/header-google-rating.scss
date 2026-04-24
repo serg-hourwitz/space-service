@@ -19,14 +19,13 @@
     align-items: center;
     gap: 8px;
 
-    &-logo img{
+    &-logo img {
       width: 36px;
 
       @include small {
         width: 20px;
       }
     }
-
 
     &-title {
       font-size: var(--fs-10);
@@ -61,18 +60,20 @@
   }
 
   &__footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
 
-    & a:first-of-type {
+    & a {
+      display: block;
       font-size: var(--fs-10);
       color: var(--c-primary);
       text-decoration: underline;
-      transition: color .3s ease-in-out;
 
-      &:hover {
-        color: var(--c-blue);
+      &::after {
+        content: url('../images/angle-small-right.svg');
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: 0px;
       }
     }
   }
