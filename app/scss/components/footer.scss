@@ -52,6 +52,10 @@
     &-menu-contacts-link--active {
       color: var(--c-secondary) !important;
     }
+
+    &-contacts-link a:first-of-type {
+      color: var(--c-secondary) !important;
+    }
   }
 
   &__footer {
