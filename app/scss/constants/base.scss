@@ -11,6 +11,10 @@ body {
   color: var(--c-primary);
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .app {
   width: 100%;
   max-width: 1440px;

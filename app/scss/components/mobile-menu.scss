@@ -104,20 +104,8 @@
     &--active {
       display: none;
       color: var(--c-primary) !important;
-
-      // &:hover {
-      //   color: var(--c-blue) !important;
-      // }
     }
   }
-
-  // &__contact-link {
-  //   transition: color .3s ease;
-
-  //   &:hover {
-  //     color: var(--c-blue) !important;
-  //   }
-  // }
 
   &__contact-sublink {
     color: var(--c-blue) !important;
