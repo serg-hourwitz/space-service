@@ -5,6 +5,7 @@
   text-align: center;
 
   @include small {
+    display: block;
     overflow: hidden;
   }
 
