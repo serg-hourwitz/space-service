@@ -31,3 +31,12 @@
   }
 }
 
+@include small {
+  .slide {
+    display: block !important;
+  }
+
+  .slide .instagram-section-card:not(:first-child) {
+    display: none;
+  }
+}
