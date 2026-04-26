@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
 
-  @include small {
+  @include norm {
     display: block;
     overflow: hidden;
   }
@@ -34,6 +34,11 @@
 @include small {
   .slide {
     display: block !important;
+  }
+
+  .slide .instagram-section-card {
+    width: 332px;
+    margin: 0 auto;
   }
 
   .slide .instagram-section-card:not(:first-child) {
