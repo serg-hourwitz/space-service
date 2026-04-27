@@ -1,26 +1,29 @@
 <form action="#" class="request-form-modal__form">
       <div class="request-form-modal__input-group">
-        <label for="name" class="request-form-modal__label">Name</label>
-        <input type="text" name="name" 
-          class="request-form-modal__input" required
-          placeholder="Your name">
-      </div>
-
-      <div class="request-form-modal__input-group">
-        <label for="email" class="request-form-modal__label">E-mail</label>
-        <input type="email" name="email"
-          class="request-form-modal__input" required
-          placeholder="E-Mail">
-      </div>
-
-      <div class="request-form-modal__input-group">
-        <label for="phone" class="request-form-modal__label">Phone Number</label>
-        <div class="request-form-modal__input-group--block">
-          <!--=include selects/form-phone-select.html-->
-          <input type="tel" name="phone" 
+        <label for="name" class="request-form-modal__label"><span>Name</span>
+          <input type="text" name="name" 
             class="request-form-modal__input" required
-            placeholder="00-000-00-00">
-        </div>
+            placeholder="Your name">
+        </label>
+      </div>
+
+      <div class="request-form-modal__input-group">
+        <label for="email" class="request-form-modal__label"><span>E-mail</span>
+          <input type="email" name="email"
+            class="request-form-modal__input" required
+            placeholder="E-Mail">
+        </label>
+      </div>
+
+      <div class="request-form-modal__input-group">
+        <label for="phone" class="request-form-modal__label"><span>Phone Number</span> 
+          <div class="request-form-modal__input-group--block">
+            <!--=include selects/form-phone-select.html-->
+            <input type="tel" name="phone" 
+              class="request-form-modal__input" required
+              placeholder="00-000-00-00">
+          </div>
+        </label>
       </div>
 
       <input type="submit" value="Book an appointment">
