@@ -1,0 +1,35 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: #78695f;
+  border-radius: var(--br-cycle);
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+
+  &:hover {
+  background: #00000066;
+  }
+}
+
+.theme-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  fill: var(--c-star-gold);
+
+  opacity: 0;
+  transform:  rotate(-90deg);
+
+  transition:
+    opacity .5s ease,
+    transform .5s ease;
+}
+
+.theme-icon.active {
+  opacity: 1;
+  transform:  rotate(0);
+}

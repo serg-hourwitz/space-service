@@ -1,5 +1,11 @@
+.accordion {
+  border-radius: var(--br-32) !important;
+  overflow: hidden;
+}
+
 .accordion-body {
   padding-top: 0;
+  color: var(--text-primary);
 }
 
 .accordion-item {
@@ -7,7 +13,7 @@
 
   &:not(.collapsed) {
     background-color: var(--c-gray-bg);
-    border-radius: var(--br-32);
+    border-radius: var(--br-32) !important; 
   }
 }
 
@@ -19,6 +25,7 @@
   border-top-left-radius: var(--br-32) !important;
   border-top-right-radius: var(--br-32) !important;
   padding: 16px 16px 8px 16px;
+  border-radius: var(--border-radius) !important;
 
   @include mobile {
     font-size: var(--fs-14);
@@ -77,6 +84,8 @@
 }
 
 .accordion-button:not(.collapsed) {
+  border-top-left-radius: var(--br-32) !important;
+    border-top-right-radius: var(--br-32) !important;
   background-color: var(--c-gray-bg);
   box-shadow: none;
 }

@@ -44,5 +44,21 @@
   --br-24: 24px;
   --br-32: 32px;
   --br-cycle: 50%;
+
+  
 }
 
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+}
+
+/* dark theme override */
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #eeeeee;
+  --text-primary: #000000;
+  --card: #1e1e1e;
+  --border: #444;
+  --border-radius: 0;
+}
