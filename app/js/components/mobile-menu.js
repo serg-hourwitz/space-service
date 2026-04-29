@@ -1,5 +1,5 @@
 const mobileMenu = document.querySelector('.mobile-menu');
-const menuBtn = document.querySelector('.burger-menu-btn');
+const menuBtn = document.querySelector('.burger-menu-btn__burger');
 const closeBtn = document.querySelector('.mobile-menu__close-btn');
 const mobileLinks = document.querySelectorAll('.mobile-menu__nav-link');
 const overlay = document.querySelector('.modal-overlay');

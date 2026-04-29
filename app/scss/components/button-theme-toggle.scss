@@ -11,7 +11,12 @@
   transition: background .3s ease-in-out;
 
   &:hover {
-  background: #00000066;
+    background: #00000066;
+  }
+
+  @include wide {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -22,7 +27,7 @@
   fill: var(--c-star-gold);
 
   opacity: 0;
-  transform:  rotate(-90deg);
+  transform: rotate(-90deg);
 
   transition:
     opacity .5s ease,
@@ -31,5 +36,5 @@
 
 .theme-icon.active {
   opacity: 1;
-  transform:  rotate(0);
+  transform: rotate(0);
 }

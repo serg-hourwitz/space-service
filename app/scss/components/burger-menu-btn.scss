@@ -3,29 +3,38 @@
   z-index: 10;
   top: 16px;
   right: 16px;
-  width: 40px;
-  height: 40px;
-  background-color: var(--c-red);
-  backdrop-filter: blur(32px);
-  border-radius: var(--br-cycle);
   display: none;
-  cursor: pointer;
 
-  & .icon {
-    width: 16px;
-    height: 16px;
-    color: var(--c-secondary);
-  }
-
-  &:hover {
-    background-color: var(--c-secondary);
-    border: 2px solid var(--c-red);
-    transition: background-color 0.3s ease, border 0.3s ease;
+  &__burger {
+    width: 40px;
+    height: 40px;
+    background-color: var(--c-red);
+    backdrop-filter: blur(32px);
+    border-radius: var(--br-cycle);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
     & .icon {
-      color: var(--c-red);
+      width: 16px;
+      height: 16px;
+      color: var(--c-secondary);
+    }
+
+    &:hover {
+      background-color: var(--c-secondary);
+      border: 2px solid var(--c-red);
+      transition: background-color 0.3s ease, border 0.3s ease;
+
+      & .icon {
+        color: var(--c-red);
+      }
     }
   }
+
+
+
 }
 
 @include wide {
@@ -33,5 +42,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 16px;
   }
 }

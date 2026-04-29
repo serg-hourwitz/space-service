@@ -17,11 +17,11 @@
   &--active {
     opacity: 1;
     visibility: visible;
-    top: 16px;
     width: calc(100% - 64px);
 
     @include medium {
       width: calc(100% - 32px);
+      top: 16px;
     }
   }
 
@@ -79,7 +79,9 @@
     }
   }
 
-  &__nav, &__contacts, &__socials {
+  &__nav,
+  &__contacts,
+  &__socials {
     flex: 1;
   }
 
@@ -98,7 +100,9 @@
     gap: 16px;
   }
 
-  &__contact-link, &__contact-code, .icon-call-outgoing {
+  &__contact-link,
+  &__contact-code,
+  .icon-call-outgoing {
     color: var(--c-primary) !important;
     font-size: var(--fs-14);
 
