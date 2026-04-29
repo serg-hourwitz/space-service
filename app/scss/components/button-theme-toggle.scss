@@ -9,10 +9,11 @@
   background: #78695f;
   border-radius: var(--br-cycle);
   cursor: pointer;
-  transition: background .3s ease-in-out;
+  transition: all .3s ease-in-out;
 
   &:hover {
     background: #00000066;
+    border: 2px solid var(--c-star-gold);
   }
 
   @include wide {
