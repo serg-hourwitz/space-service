@@ -1,15 +1,28 @@
 .burger-menu-btn {
-  position: absolute;
-  z-index: 10;
-  top: 16px;
-  right: 16px;
+  position: fixed;
+  z-index: 100;
+  top: 48px;
+  right: 48px;
   display: none;
+
+  @include medium {
+    top: 32px;
+    right: 32px;
+  }
+
+  @include wide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
 
   &__burger {
     width: 40px;
     height: 40px;
     background-color: var(--c-red);
     backdrop-filter: blur(32px);
+    border: 2px solid var(--c-secondary);
     border-radius: var(--br-cycle);
     display: flex;
     justify-content: center;
@@ -31,17 +44,5 @@
         color: var(--c-red);
       }
     }
-  }
-
-
-
-}
-
-@include wide {
-  .burger-menu-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
   }
 }
